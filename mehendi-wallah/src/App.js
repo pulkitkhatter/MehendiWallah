@@ -6,7 +6,6 @@ import backdrop from './backdrop.png';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
