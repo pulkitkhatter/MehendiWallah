@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className='header'>
-        <Navbar bg="transparent" variant="light">
+        <Navbar bg="transparent" variant="light" className='navbar'>
           <Container>
             <Nav className="justify-content-start">
               <Nav.Link href="#home">Home</Nav.Link>
@@ -30,17 +30,15 @@ function App() {
             </Nav>
           </Container>
         </Navbar>
+        
       </header>
-
       <Container>
-          <img src={backdrop} className="App-backdrop" alt="backdrop" />
-        </Container>
-        <Container className='book-now-text'>
-          Best Salon and Mehndi <br /> Services in the City! <br />
-          <button className='book-now-button'>Book Now</button>
-        </Container>
-      
-      
+        <img src={backdrop} className="App-backdrop" alt="backdrop" />
+      </Container>
+      <Container className='book-now-text'>
+        Best Salon and Mehndi <br /> Services in the City! <br />
+        <button className='book-now-button'>Book Now</button>
+      </Container>
     </div>
   );
 }
