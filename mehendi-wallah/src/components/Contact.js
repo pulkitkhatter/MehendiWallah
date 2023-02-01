@@ -4,6 +4,7 @@ import linkedIn from "../images/linkedIn.png";
 import facebook from "../images/facebook.png";
 import twitter from "../images/twitter.png";
 import insta from "../images/insta.png";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Contact = () => {
   return (
@@ -54,10 +55,53 @@ const Contact = () => {
             </button>
           </form>
           <section className="flex space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-2">
-            <img src={linkedIn} alt="linked in logo" className="w-10 md:w-8" />
-            <img src={facebook} alt="linked in logo" className="w-10 md:w-8" />
-            <img src={twitter} alt="linked in logo" className="w-10 md:w-8" />
-            <img src={insta} alt="linked in logo" className="w-10 md:w-8" />
+            <button className="active:scale-105 w-fit transition transform duration-150">
+              <a
+                href="https://www.linkedin.com/in/mehendi-wala-a99542264/"
+                target={"_blank"}
+              >
+                <img
+                  src={linkedIn}
+                  alt="linked in logo"
+                  className="w-10 md:w-8 "
+                />
+              </a>
+            </button>
+            {/* <button className="active:scale-105 transition transform duration-150">
+              <a href="#" target={"_blank"}>
+                <img
+                  src={facebook}
+                  alt="linked in logo"
+                  className="w-10 md:w-8 "
+                />
+              </a>
+            </button> */}
+            <button className="active:scale-105 w-fit transition transform duration-150">
+              <a href="https://twitter.com/TheMehndiWala" target={"_blank"}>
+                <img
+                  src={twitter}
+                  alt="linked in logo"
+                  className="w-10 md:w-8 "
+                />
+              </a>
+            </button>
+            {/* <button className="active:scale-105 w-fit transition transform duration-150">
+              <a href="#" target={"_blank"}>
+                <img
+                  src={insta}
+                  alt="linked in logo"
+                  className="w-10 md:w-8 "
+                />
+              </a>
+            </button> */}
+            <button className="flex space-x-3 items-center">
+              <span>
+                <HiOutlineMail className="text-white bg-black text-3xl p-1 rounded-full" />
+              </span>
+              <span className="bg-gray-400 p-1 rounded-md bg-opacity-50">
+                themehendiwala@gmail.com
+              </span>
+            </button>
           </section>
         </div>
       </main>
