@@ -95,12 +95,14 @@ const Contact = () => {
               </a>
             </button> */}
             <button className="flex space-x-3 items-center">
-              <span>
-                <HiOutlineMail className="text-white bg-black text-3xl p-1 rounded-full" />
-              </span>
-              <span className="bg-gray-400 p-1 rounded-md bg-opacity-50">
-                themehendiwala@gmail.com
-              </span>
+              <a href="mailto:themehendiwala@gmail.com" target={"_blank"}>
+                <span>
+                  <HiOutlineMail className="text-white bg-black text-3xl p-1 rounded-full" />
+                </span>
+                <span className="bg-gray-400 p-1 rounded-md bg-opacity-50">
+                  themehendiwala@gmail.com
+                </span>
+              </a>
             </button>
           </section>
         </div>
