@@ -1,44 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
-import backdrop from './backdrop.png';
-
-
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import "./App.css";
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Hero from "./components/Hero";
+import { useRef } from "react";
+import Services from "./components/Services";
+import About from "./components/About";
+import WhyUs from "./components/WhyUs";
+import Contact from "./components/Contact";
 
 function App() {
+  const homeRef = useRef();
+  const servicesRef = useRef();
+  const aboutRef = useRef();
+  const whyUsRef = useRef();
+  const contactUsRef = useRef();
+
+  const scrollToRef = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="App">
-      <header className='header'>
-        <Navbar bg="transparent" variant="light" className='navbar'>
-          <Container>
-            <Nav className="justify-content-start">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#services">Services</Nav.Link>
-              <Nav.Link href="#aboutus">About Us</Nav.Link>
-              <Nav.Link href="#whyus">Why Us</Nav.Link>
-            </Nav>
-            <Navbar.Brand href="#home" className='justify-content-center'>
-              <img src={logo} className="App-logo" alt="logo" />
-            </Navbar.Brand>
-            <Nav className='justify-content-end'>
-              <Nav.Link href="#gallery">Gallery</Nav.Link>
-              <Nav.Link href="#contactus">Contact Us</Nav.Link>
-              <Nav.Link href="#more">More</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-        
-      </header>
-      <Container>
-        <img src={backdrop} className="App-backdrop" alt="backdrop" />
-      </Container>
-      <Container className='book-now-text'>
-        Best Salon and Mehndi <br /> Services in the City! <br />
-        <button className='book-now-button'>Book Now</button>
-      </Container>
+      <div>
+        <Hero
+          scrollFunction={scrollToRef}
+          ref={homeRef}
+          homeRef={homeRef}
+          servicesRef={servicesRef}
+          aboutRef={aboutRef}
+          whyUsRef={whyUsRef}
+          contactUsRef={contactUsRef}
+        />
+      </div>
+      <div ref={servicesRef}>
+        <Services />
+      </div>
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={whyUsRef}>
+        <WhyUs />
+      </div>
+      <div ref={contactUsRef}>
+        <Contact />
+      </div>
     </div>
   );
 }
