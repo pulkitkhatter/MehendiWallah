@@ -99,9 +99,6 @@ const Contact = () => {
                 <span>
                   <HiOutlineMail className="text-white bg-black text-3xl p-1 rounded-full" />
                 </span>
-                <span className="bg-gray-400 p-1 rounded-md bg-opacity-50">
-                  themehendiwala@gmail.com
-                </span>
               </a>
             </button>
           </section>
